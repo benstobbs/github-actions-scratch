@@ -1,0 +1,10 @@
+on:
+  workflow_dispatch
+
+jobs:
+  oss_py3_ssl:
+    runs-on: windows-latest
+    steps:
+      run: curl https://github.com/YosysHQ/oss-cad-suite-build/releases/download/2022-01-30/oss-cad-suite-windows-x64-20220130.exe -O archive.exe
+      run: ./archive.exe
+      run: cd oss-cad-suite; ./environment.bat; where python3; python3 -m ssl
