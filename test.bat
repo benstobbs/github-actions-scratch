@@ -1,4 +1,4 @@
-Powershell.exe -Command "curl https://github.com/YosysHQ/oss-cad-suite-build/releases/download/2022-01-30/oss-cad-suite-windows-x64-20220130.exe -O archive.exe"
+Powershell.exe -Command "curl https://github.com/benstobbs/oss-cad-suite-build/releases/download/manual-python3-ssl/oss-cad-suite-windows-x64-20220131.exe -O archive.exe"
 .\archive.exe
 
 set YOSYSHQ_ROOT=.\oss-cad-suite\
@@ -7,7 +7,7 @@ set YOSYSHQ_ROOT=.\oss-cad-suite\
 @set SSL_CERT_FILE=%YOSYSHQ_ROOT%etc\cacert.pem
 
 @set PATH=%YOSYSHQ_ROOT%bin;%YOSYSHQ_ROOT%lib;%YOSYSHQ_ROOT%py3bin;%PATH%
-@set PYTHON_EXECUTABLE=%YOSYSHQ_ROOT%p3bin\python3.exe
+@set PYTHON_EXECUTABLE=%YOSYSHQ_ROOT%py3bin\python3.exe
 @set QT_PLUGIN_PATH=%YOSYSHQ_ROOT%lib\qt5\plugins
 @set QT_LOGGING_RULES=*=false
 
