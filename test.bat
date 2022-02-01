@@ -1,6 +1,9 @@
 Powershell.exe -Command "curl https://github.com/benstobbs/oss-cad-suite-build/releases/download/manual-python3-ssl/oss-cad-suite-windows-x64-20220131.exe -O archive.exe"
 .\archive.exe
 
+copy .\oss-cad-suite\lib\libcrypto-1_1-x64.dll .\oss-cad-suite\lib\python3.8\lib-dynload\libcrypto-1_1-x64.dll
+copy .\oss-cad-suite\lib\libssl-1_1-x64.dll .\oss-cad-suite\lib\python3.8\lib-dynload\libssl-1_1-x64.dll 
+
 set YOSYSHQ_ROOT=.\oss-cad-suite\
 
 @set prompt=[OSS CAD Suite] $p$g
